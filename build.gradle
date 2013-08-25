@@ -48,7 +48,7 @@ dependencies {
 
     provided 'javax.servlet:servlet-api:2.4' // needed for scala based bukkit plugins
 
-	provided 'org.bukkit:bukkit:1.6.2-R0.1-SNAPSHOT'
+	provided 'org.bukkit:bukkit:1.6.2-R0.2-SNAPSHOT'
 }
 
 sourceSets {
@@ -73,5 +73,5 @@ jar {
 }
 
 task wrapper(type: Wrapper) {
-	gradleVersion = '1.6'
+	gradleVersion = '1.7'
 }
