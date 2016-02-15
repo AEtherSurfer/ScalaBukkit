@@ -14,15 +14,21 @@ ext {
 }
 
 group = "com.aethercraft"
-version = "$scalaVersion-R0.1-SNAPSHOT"
+version = "$scalaVersion-R0.2-SNAPSHOT"
 
 sourceCompatibility = 1.7
 
 repositories {
 	mavenLocal()
 	mavenCentral()
-	mavenRepo name:'scala-releases', url:'http://scala-tools.org/repo-releases/'
-	mavenRepo name:'scala-snapshots', url:'http://scala-tools.org/repo-snapshots/'
+	maven {
+		name 'scala-releases'
+		url 'http://scala-tools.org/repo-releases/'
+	}
+	maven {
+		name 'scala-snapshots'
+		url 'http://scala-tools.org/repo-snapshots/'
+	}
 	maven {
 		url "http://repo.bukkit.org/content/groups/public"
 	}
@@ -48,7 +54,7 @@ dependencies {
 
     provided 'javax.servlet:servlet-api:2.4' // needed for scala based bukkit plugins
 
-	provided 'org.bukkit:bukkit:1.6.2-R0.2-SNAPSHOT'
+	provided 'org.bukkit:bukkit:1.6.2-R1.0'
 }
 
 sourceSets {
@@ -73,5 +79,5 @@ jar {
 }
 
 task wrapper(type: Wrapper) {
-	gradleVersion = '1.7'
+	gradleVersion = '2.11'
 }
