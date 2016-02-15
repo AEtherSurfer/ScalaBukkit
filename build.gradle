@@ -14,7 +14,7 @@ ext {
 }
 
 group = "com.aethercraft"
-version = "$scalaVersion-R0.2-SNAPSHOT"
+version = "$scalaVersion-R0.3.0-SNAPSHOT"
 
 sourceCompatibility = 1.7
 
@@ -51,8 +51,6 @@ dependencies {
 	scalaLibrary "org.scala-lang:scala-library:$scalaVersion"
 
     compile "org.scala-lang:scala-library:$scalaVersion"
-
-    provided 'javax.servlet:servlet-api:2.4' // needed for scala based bukkit plugins
 
 	provided 'org.bukkit:bukkit:1.6.2-R1.0'
 }
